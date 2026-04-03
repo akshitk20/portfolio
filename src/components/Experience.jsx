@@ -4,6 +4,7 @@ function Experience() {
   const experiences = [
     {
       company: 'SAP',
+      logo: '/logos/sap.jpg',
       role: 'Software Engineer',
       period: 'Oct 2025 – Present',
       location: 'Bangalore',
@@ -12,6 +13,7 @@ function Experience() {
     },
     {
       company: 'NatWest Group',
+      logo: '/logos/nwg-social-media-logo.png',
       role: 'Software Engineer',
       period: 'Sept 2023 – Oct 2025',
       location: 'Gurgaon',
@@ -20,6 +22,7 @@ function Experience() {
     },
     {
       company: 'Lenskart',
+      logo: '/logos/images.jpeg',
       role: 'Software Engineer',
       period: 'Apr 2022 – Sept 2023',
       location: 'Gurgaon',
@@ -28,6 +31,7 @@ function Experience() {
     },
     {
       company: 'Impetus Technologies',
+      logo: '/logos/impetus.png',
       role: 'Software Engineer',
       period: 'Sept 2021 – Apr 2022',
       location: 'Remote',
@@ -36,6 +40,7 @@ function Experience() {
     },
     {
       company: 'Tavisca',
+      logo: '/logos/tenerity.png',
       role: 'Software Engineer',
       period: 'Jun 2019 – Sept 2021',
       location: 'Pune',
@@ -51,21 +56,26 @@ function Experience() {
         <div className="experience-timeline">
           {experiences.map((exp, index) => (
             <div key={index} className="experience-card">
-              <div className="experience-header">
-                <div className="experience-company-info">
-                  <h3>{exp.company}</h3>
-                  <span className="experience-role">{exp.role}</span>
-                </div>
-                <div className="experience-meta">
-                  <span className="experience-period">{exp.period}</span>
-                  <span className="experience-location">{exp.location}</span>
-                </div>
+              <div className="experience-logo">
+                <img src={exp.logo} alt={exp.company} />
               </div>
-              <p className="experience-description">{exp.description}</p>
-              <div className="experience-tech">
-                {exp.tech.map((t, i) => (
-                  <span key={i} className="tech-tag">{t}</span>
-                ))}
+              <div className="experience-content">
+                <div className="experience-header">
+                  <div className="experience-company-info">
+                    <h3>{exp.company}</h3>
+                    <span className="experience-role">{exp.role}</span>
+                  </div>
+                  <div className="experience-meta">
+                    <span className="experience-period">{exp.period}</span>
+                    <span className="experience-location">{exp.location}</span>
+                  </div>
+                </div>
+                <p className="experience-description">{exp.description}</p>
+                <div className="experience-tech">
+                  {exp.tech.map((t, i) => (
+                    <span key={i} className="tech-tag">{t}</span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
