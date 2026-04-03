@@ -1,0 +1,133 @@
+.experience {
+  padding: 8rem 2rem;
+  background: var(--bg-light);
+}
+
+.experience .section-title {
+  margin-bottom: 4rem;
+}
+
+.experience-timeline {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.experience-card {
+  background: var(--bg-light);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.experience-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--primary);
+  border-radius: 4px 0 0 4px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateX(8px);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+
+.experience-card:hover::before {
+  opacity: 1;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.experience-company-info h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.25rem;
+}
+
+.experience-role {
+  font-size: 1rem;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.experience-meta {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.experience-period {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.experience-location {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.experience-description {
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.experience-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.experience-tech .tech-tag {
+  background: var(--bg-cream);
+  color: var(--text-dark);
+  padding: 0.375rem 0.875rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 768px) {
+  .experience {
+    padding: 5rem 1.5rem;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .experience-meta {
+    text-align: left;
+  }
+
+  .experience-card {
+    padding: 1.5rem;
+  }
+
+  .experience-card:hover {
+    transform: none;
+  }
+}
