@@ -32,16 +32,18 @@ function Projects() {
         <div className="projects-grid">
           {projects.map((project, index) => (
             <div key={index} className="project-card">
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
-              <div className="project-tech">
-                {project.tech.map((t, i) => (
-                  <span key={i} className="tech-tag">{t}</span>
-                ))}
-              </div>
-              <div className="project-links">
-                <a href={project.github} className="project-link">GitHub</a>
-                <a href={project.demo} className="project-link">Live Demo</a>
+              <div className="project-card-content">
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <div className="project-tech">
+                  {project.tech.map((t, i) => (
+                    <span key={i} className="tech-tag">{t}</span>
+                  ))}
+                </div>
+                <div className="project-links">
+                  <a href={project.github} className="project-link">GitHub</a>
+                  <a href={project.demo} className="project-link">Live Demo</a>
+                </div>
               </div>
             </div>
           ))}
