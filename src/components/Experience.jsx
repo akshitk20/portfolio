@@ -1,10 +1,12 @@
 import './Experience.css';
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 function Experience() {
   const experiences = [
     {
       company: 'SAP',
-      logo: '/logos/sap.jpg',
+      logo: `${BASE_URL}logos/sap.jpg`,
       role: 'Software Engineer',
       period: 'Oct 2025 – Present',
       location: 'Bangalore',
@@ -13,7 +15,7 @@ function Experience() {
     },
     {
       company: 'NatWest Group',
-      logo: '/logos/nwg-social-media-logo.png',
+      logo: `${BASE_URL}logos/nwg-social-media-logo.png`,
       role: 'Software Engineer',
       period: 'Sept 2023 – Oct 2025',
       location: 'Gurgaon',
@@ -22,7 +24,7 @@ function Experience() {
     },
     {
       company: 'Lenskart',
-      logo: '/logos/images.jpeg',
+      logo: `${BASE_URL}logos/images.jpeg`,
       role: 'Software Engineer',
       period: 'Apr 2022 – Sept 2023',
       location: 'Gurgaon',
@@ -31,7 +33,7 @@ function Experience() {
     },
     {
       company: 'Impetus Technologies',
-      logo: '/logos/impetus.png',
+      logo: `${BASE_URL}logos/impetus.png`,
       role: 'Software Engineer',
       period: 'Sept 2021 – Apr 2022',
       location: 'Remote',
@@ -40,7 +42,7 @@ function Experience() {
     },
     {
       company: 'Tavisca',
-      logo: '/logos/tenerity.png',
+      logo: `${BASE_URL}logos/tenerity.png`,
       role: 'Software Engineer',
       period: 'Jun 2019 – Sept 2021',
       location: 'Pune',

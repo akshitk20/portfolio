@@ -1,5 +1,7 @@
 import './Navbar.css';
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 function Navbar() {
   return (
     <nav className="navbar">
@@ -12,7 +14,7 @@ function Navbar() {
           <a href="#skills">Skills</a>
           <a href="#education">Education</a>
           <a href="#contact">Contact</a>
-          <a href="/resume.pdf" download className="navbar-resume">
+          <a href={`${BASE_URL}resume.pdf`} download className="navbar-resume">
             Resume
           </a>
         </div>

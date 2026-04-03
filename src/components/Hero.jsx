@@ -1,17 +1,19 @@
 import './Hero.css';
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 function Hero() {
   return (
     <section className="hero">
       <div className="hero-content">
         <div className="hero-photo">
-          <img src="/photo.jpg" alt="Akshit Khatri" />
+          <img src={`${BASE_URL}photo.jpg`} alt="Akshit Khatri" />
         </div>
         <h1>Akshit Khatri</h1>
         <h2>Software Engineer</h2>
         <p>6+ years of experience in backend development for cloud using Java, Spring Boot & GCP</p>
         <div className="hero-alma-mater">
-          <img src="/logos/Birla_Institute_of_Technology_Mesra.png" alt="BIT Mesra" />
+          <img src={`${BASE_URL}logos/Birla_Institute_of_Technology_Mesra.png`} alt="BIT Mesra" />
           <span>BIT Mesra, Ranchi</span>
         </div>
 

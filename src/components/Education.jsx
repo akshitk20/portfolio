@@ -1,5 +1,7 @@
 import './Education.css';
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 function Education() {
   return (
     <section id="education" className="education">
@@ -7,7 +9,7 @@ function Education() {
         <h2 className="section-title">Education</h2>
         <div className="education-card">
           <div className="education-logo">
-            <img src="/logos/Birla_Institute_of_Technology_Mesra.png" alt="BIT Mesra" />
+            <img src={`${BASE_URL}logos/Birla_Institute_of_Technology_Mesra.png`} alt="BIT Mesra" />
           </div>
           <div className="education-content">
             <div className="education-header">
